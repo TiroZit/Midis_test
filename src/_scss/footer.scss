@@ -1,0 +1,17 @@
+.footer{
+  font-weight: 300;
+  text-transform: uppercase;
+  border-top: 1px solid $colorBlackOnyx;
+  &__container{
+    padding: rem(20) rem(30);
+	}
+  &__logo{
+    display: flex;
+    align-items: center;
+    gap: rem(20);
+    transition: all .3s ease 0s;
+    &:hover{
+      color: $colorOrange;
+    }
+  }
+}
