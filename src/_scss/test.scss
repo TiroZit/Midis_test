@@ -14,7 +14,7 @@
   &__question{
     @include adaptiveValue("font-size", 24, 16);
     line-height: 1.4;
-    min-height: rem(180);
+    min-height: rem(130);
   }
   &__answer{
     display: flex;

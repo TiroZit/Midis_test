@@ -296,7 +296,7 @@ address {
 
 .test__question {
   line-height: 1.4;
-  min-height: 11.25rem;
+  min-height: 8.125rem;
 }
 
 .test__answer {
