@@ -291,16 +291,19 @@ address {
 
 .test {
   max-width: 56.25rem;
+  min-width: 56.25rem;
   padding: 6.25rem 0.625rem;
 }
 
 .test__question {
   line-height: 1.4;
+  min-height: 11.25rem;
 }
 
 .test__answer {
   display: flex;
   gap: 1.25rem;
+  margin-top: 0.625rem;
 }
 
 .test__btn-answer {
@@ -375,10 +378,6 @@ address {
     font-size: 1.5rem;
   }
 
-  .test__answer {
-    margin-top: 3.75rem;
-  }
-
   .test__footer {
     margin-top: 3.75rem;
   }
@@ -415,10 +414,6 @@ address {
 
   .test__question {
     font-size: 1rem;
-  }
-
-  .test__answer {
-    margin-top: 1.875rem;
   }
 
   .test__footer {
@@ -483,10 +478,6 @@ address {
 
   .test__question {
     font-size: clamp( 1rem , 0.9rem  +  0.5vw , 1.5rem );
-  }
-
-  .test__answer {
-    margin-top: clamp( 1.875rem , 1.5rem  +  1.875vw , 3.75rem );
   }
 
   .test__footer {

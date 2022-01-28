@@ -1,5 +1,6 @@
 .test{
   max-width: rem(900);
+  min-width: rem(900);
   padding: rem(100) rem(10);
   @include media-breakpoint-down(mobile){
     padding: rem(80) rem(10);
@@ -11,11 +12,12 @@
   &__question{
     @include adaptiveValue("font-size", 24, 16);
     line-height: 1.4;
+    min-height: rem(180);
   }
   &__answer{
     display: flex;
     gap: rem(20);
-    @include adaptiveValue("margin-top", 60, 30);
+    margin-top: rem(10);
     @include media-breakpoint-up(mobile){
       margin-left: rem(10);
     }
