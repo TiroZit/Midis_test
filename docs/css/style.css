@@ -291,7 +291,6 @@ address {
 
 .test {
   max-width: 56.25rem;
-  min-width: 56.25rem;
   padding: 6.25rem 0.625rem;
 }
 
@@ -350,6 +349,12 @@ address {
 
   .test__btn-back {
     margin-left: 0.625rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .test {
+    min-width: 56.25rem;
   }
 }
 

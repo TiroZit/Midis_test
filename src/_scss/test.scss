@@ -1,7 +1,9 @@
 .test{
   max-width: rem(900);
-  min-width: rem(900);
   padding: rem(100) rem(10);
+  @include media-breakpoint-up(laptop){
+    min-width: rem(900);
+  }
   @include media-breakpoint-down(mobile){
     padding: rem(80) rem(10);
     display: flex;
