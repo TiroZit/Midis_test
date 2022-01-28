@@ -283,6 +283,9 @@ address {
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   line-height: 1.2;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .footer__logo:hover {
