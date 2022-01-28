@@ -145,9 +145,7 @@ address {
   position: absolute;
   top: 0;
   right: 0;
-  background: url("../img/logo-m.jpg") top/cover no-repeat;
-  width: 6.25rem;
-  height: 9.375rem;
+  background: url("../img/logo-m.svg") top/cover no-repeat;
 }
 
 /*
@@ -181,7 +179,6 @@ address {
 }
 
 .btn {
-  font-size: 1.125rem;
   border: 1px solid #f8f8f8;
   background-color: #fdfdfd;
   border-radius: 5px;
@@ -210,7 +207,6 @@ address {
 
 .header {
   border-bottom: 1px solid var(--colorBlackOnyx);
-  font-size: 1.25rem;
 }
 
 .header__container {
@@ -277,8 +273,12 @@ address {
 
 .footer__logo {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 1.25rem;
+  -webkit-column-gap: 1.25rem;
+     -moz-column-gap: 1.25rem;
+          column-gap: 1.25rem;
+  row-gap: 0.625rem;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
@@ -291,18 +291,16 @@ address {
 
 .test {
   max-width: 56.25rem;
+  padding: 6.25rem 0.625rem;
 }
 
 .test__question {
-  font-size: 1.5rem;
   line-height: 1.4;
 }
 
 .test__answer {
   display: flex;
   gap: 1.25rem;
-  margin-top: 3.75rem;
-  margin-left: 0.625rem;
 }
 
 .test__btn-answer {
@@ -320,7 +318,6 @@ address {
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   border-radius: 75px;
-  margin-left: 0.625rem;
 }
 
 .test__btn-back:hover {
@@ -331,17 +328,176 @@ address {
 .test__footer {
   display: flex;
   align-items: center;
-  margin-top: 3.75rem;
-  font-size: 1.125rem;
 }
 
 .test__progress-counter {
   display: flex;
   gap: 0.3125rem;
-  margin-right: 1.875rem;
 }
 
 .test__progress_line {
   flex: 1 1 auto;
   height: 0.9375rem;
+}
+
+@media (min-width: 48em) {
+  .test__answer {
+    margin-left: 0.625rem;
+  }
+
+  .test__btn-back {
+    margin-left: 0.625rem;
+  }
+}
+
+@media (min-width: 120em) {
+  .page__questions::after {
+    width: 6.25rem;
+  }
+
+  .page__questions::after {
+    height: 9.375rem;
+  }
+
+  .btn {
+    font-size: 1.125rem;
+  }
+
+  .header {
+    font-size: 1.25rem;
+  }
+
+  .footer {
+    font-size: 1rem;
+  }
+
+  .test__question {
+    font-size: 1.5rem;
+  }
+
+  .test__answer {
+    margin-top: 3.75rem;
+  }
+
+  .test__footer {
+    margin-top: 3.75rem;
+  }
+
+  .test__footer {
+    font-size: 1.125rem;
+  }
+
+  .test__progress-counter {
+    margin-right: 1.875rem;
+  }
+}
+
+@media (max-width: 20em) {
+  .page__questions::after {
+    width: 3.125rem;
+  }
+
+  .page__questions::after {
+    height: 3.75rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+  }
+
+  .header {
+    font-size: 1rem;
+  }
+
+  .footer {
+    font-size: 0.875rem;
+  }
+
+  .test__question {
+    font-size: 1rem;
+  }
+
+  .test__answer {
+    margin-top: 1.875rem;
+  }
+
+  .test__footer {
+    margin-top: 1.875rem;
+  }
+
+  .test__footer {
+    font-size: 0.875rem;
+  }
+
+  .test__progress-counter {
+    margin-right: 0.625rem;
+  }
+}
+
+@media (max-width: 63.99875em) {
+  .wrapper {
+    margin: 0 0.625rem;
+  }
+}
+
+@media (max-width: 47.99875em) {
+  .footer__logo {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .test {
+    padding: 5rem 0.625rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .test__answer {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 20em) and (max-width: 120em) {
+  .page__questions::after {
+    width: clamp( 3.125rem , 2.5rem  +  3.125vw , 6.25rem );
+  }
+
+  .page__questions::after {
+    height: clamp( 3.75rem , 2.625rem  +  5.625vw , 9.375rem );
+  }
+
+  .btn {
+    font-size: clamp( 1rem , 0.975rem  +  0.125vw , 1.125rem );
+  }
+
+  .header {
+    font-size: clamp( 1rem , 0.95rem  +  0.25vw , 1.25rem );
+  }
+
+  .footer {
+    font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem );
+  }
+
+  .test__question {
+    font-size: clamp( 1rem , 0.9rem  +  0.5vw , 1.5rem );
+  }
+
+  .test__answer {
+    margin-top: clamp( 1.875rem , 1.5rem  +  1.875vw , 3.75rem );
+  }
+
+  .test__footer {
+    margin-top: clamp( 1.875rem , 1.5rem  +  1.875vw , 3.75rem );
+  }
+
+  .test__footer {
+    font-size: clamp( 0.875rem , 0.825rem  +  0.25vw , 1.125rem );
+  }
+
+  .test__progress-counter {
+    margin-right: clamp( 0.625rem , 0.375rem  +  1.25vw , 1.875rem );
+  }
 }

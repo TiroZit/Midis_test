@@ -1,6 +1,6 @@
 .header{
 	border-bottom: 1px solid $colorBlackOnyx;
-	font-size: rem(20);
+	@include adaptiveValue("font-size", 20, 16);
 	&__container{
 		padding: rem(20) rem(30);
 	}

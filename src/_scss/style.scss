@@ -90,6 +90,9 @@ body {
 	flex-direction: column;
 	overflow: hidden;
 	margin: 0 rem(50);
+	@include media-breakpoint-down(laptop){
+		margin: 0 rem(10);
+	}
 	// Прижимаем footer
 	> main {
 		flex: 1 1 auto;
@@ -110,9 +113,9 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-    background: url('@img/logo-m.jpg') top / cover no-repeat;
-    width: rem(100);
-    height: rem(150);
+    background: url('@img/logo-m.svg') top / cover no-repeat;
+    @include adaptiveValue("width", 100, 50);
+    @include adaptiveValue("height", 150, 60);
   }
 }
 // Ограничивающий контейнер ======================================================================================================================================================================================================================

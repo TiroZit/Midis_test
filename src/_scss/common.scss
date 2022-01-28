@@ -1,5 +1,5 @@
 .btn{
-  font-size: rem(18);
+  @include adaptiveValue("font-size", 18, 16);
   border: 1px solid #f8f8f8;
   background-color: #fdfdfd;
   border-radius: 5px;

@@ -1,14 +1,28 @@
 .test{
   max-width: rem(900);
+  padding: rem(100) rem(10);
+  @include media-breakpoint-down(mobile){
+    padding: rem(80) rem(10);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
   &__question{
-    font-size: rem(24);
+    @include adaptiveValue("font-size", 24, 16);
     line-height: 1.4;
   }
   &__answer{
     display: flex;
     gap: rem(20);
-    margin-top: rem(60);
-    margin-left: rem(10);
+    @include adaptiveValue("margin-top", 60, 30);
+    @include media-breakpoint-up(mobile){
+      margin-left: rem(10);
+    }
+    @include media-breakpoint-down(mobile){
+      flex-direction: column;
+      justify-content: center;
+    }
   }
   &__btn-answer{
     padding: rem(7) rem(20);
@@ -22,7 +36,9 @@
     border: 1px solid #f8f8f8;
     transition: all .3s ease 0s;
     border-radius: 75px;
-    margin-left: rem(10);
+    @include media-breakpoint-up(mobile){
+      margin-left: rem(10);
+    }
     &:hover{
       border: 1px solid $colorOrange;
       color: $colorOrange;
@@ -31,13 +47,13 @@
   &__footer{
     display: flex;
     align-items: center;
-    margin-top: rem(60);
-    font-size: rem(18);
+    @include adaptiveValue("margin-top", 60, 30);
+    @include adaptiveValue("font-size", 18, 14);
   }
   &__progress-counter{
     display: flex;
     gap: rem(5);
-    margin-right: rem(30);
+    @include adaptiveValue("margin-right", 30, 10);
   }
   &__progress_line{
     flex: 1 1 auto;
