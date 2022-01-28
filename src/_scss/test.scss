@@ -22,6 +22,7 @@
     border: 1px solid #f8f8f8;
     transition: all .3s ease 0s;
     border-radius: 75px;
+    margin-left: rem(10);
     &:hover{
       border: 1px solid $colorOrange;
       color: $colorOrange;
