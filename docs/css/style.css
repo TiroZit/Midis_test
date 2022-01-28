@@ -132,6 +132,24 @@ address {
   flex: 1 1 auto;
 }
 
+.page__questions {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page__questions::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url("../img/logo-m.jpg") top/cover no-repeat;
+  width: 6.25rem;
+  height: 9.375rem;
+}
+
 /*
 (i) Стили будут применяться ко 
 всем классам содержащим *__container
@@ -162,8 +180,37 @@ address {
      object-fit: contain;
 }
 
+.btn {
+  font-size: 1.125rem;
+  border: 1px solid #f8f8f8;
+  background-color: #fdfdfd;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.btn:hover {
+  color: var(--colorOrange);
+  border: 1px solid var(--colorOrange);
+}
+
+.progress {
+  background-color: #e9ecef;
+  border-radius: 0.3125rem;
+}
+
+.progress-bar {
+  width: 2%;
+  height: 0.9375rem;
+  border-top-left-radius: 0.3125rem;
+  border-bottom-left-radius: 0.3125rem;
+  background: var(--colorOrange);
+}
+
 .header {
   border-bottom: 1px solid var(--colorBlackOnyx);
+  font-size: 1.25rem;
 }
 
 .header__container {
@@ -221,6 +268,7 @@ address {
   font-weight: 300;
   text-transform: uppercase;
   border-top: 1px solid var(--colorBlackOnyx);
+  color: #706F6F;
 }
 
 .footer__container {
@@ -234,8 +282,65 @@ address {
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  line-height: 1.2;
 }
 
 .footer__logo:hover {
   color: var(--colorOrange);
+}
+
+.test {
+  max-width: 56.25rem;
+}
+
+.test__question {
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+.test__answer {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 3.75rem;
+  margin-left: 0.625rem;
+}
+
+.test__btn-answer {
+  padding: 0.4375rem 1.25rem;
+}
+
+.test__btn-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.875rem;
+  padding: 0.4375rem 0.9375rem;
+  border: 1px solid #f8f8f8;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  border-radius: 75px;
+}
+
+.test__btn-back:hover {
+  border: 1px solid var(--colorOrange);
+  color: var(--colorOrange);
+}
+
+.test__footer {
+  display: flex;
+  align-items: center;
+  margin-top: 3.75rem;
+  font-size: 1.125rem;
+}
+
+.test__progress-counter {
+  display: flex;
+  gap: 0.3125rem;
+  margin-right: 1.875rem;
+}
+
+.test__progress_line {
+  flex: 1 1 auto;
+  height: 0.9375rem;
 }

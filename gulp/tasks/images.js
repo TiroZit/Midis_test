@@ -10,15 +10,15 @@ export const images = () => {
       }))
     )
     .pipe(app.plugins.newer(app.path.build.images))
-    .pipe(
-      app.plugins.if(
-        app.isBuild,
-        squoosh({
-					avif: {},
-					webp: {},
-				})
-      )
-    )
+    // .pipe(
+    //   app.plugins.if(
+    //     app.isBuild,
+    //     squoosh({
+		// 			avif: {},
+		// 			webp: {},
+		// 		})
+    //   )
+    // )
     .pipe(
       app.plugins.if(
         app.isBuild,

@@ -1,0 +1,45 @@
+.test{
+  max-width: rem(900);
+  &__question{
+    font-size: rem(24);
+    line-height: 1.4;
+  }
+  &__answer{
+    display: flex;
+    gap: rem(20);
+    margin-top: rem(60);
+    margin-left: rem(10);
+  }
+  &__btn-answer{
+    padding: rem(7) rem(20);
+  }
+  &__btn-back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: rem(30);
+    padding: rem(7) rem(15);
+    border: 1px solid #f8f8f8;
+    transition: all .3s ease 0s;
+    border-radius: 75px;
+    &:hover{
+      border: 1px solid $colorOrange;
+      color: $colorOrange;
+    }
+  }
+  &__footer{
+    display: flex;
+    align-items: center;
+    margin-top: rem(60);
+    font-size: rem(18);
+  }
+  &__progress-counter{
+    display: flex;
+    gap: rem(5);
+    margin-right: rem(30);
+  }
+  &__progress_line{
+    flex: 1 1 auto;
+    height: rem(15);
+  }
+}

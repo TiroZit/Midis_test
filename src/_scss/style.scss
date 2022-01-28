@@ -99,7 +99,22 @@ body {
 	// 	min-width: 0;
 	// }
 }
-
+.page__questions{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&::after{
+    content:'';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url('@img/logo-m.jpg') top / cover no-repeat;
+    width: rem(100);
+    height: rem(150);
+  }
+}
 // Ограничивающий контейнер ======================================================================================================================================================================================================================
 
 /*
