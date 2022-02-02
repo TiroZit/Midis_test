@@ -1,1 +1,69 @@
+.page{
+  display: flex;
+  flex-direction: column;
+  padding: 0 rem(100);
+  @include media-breakpoint-down(laptop){
+    padding: 0 rem(10);
+  }
+  @include media-breakpoint-up(mobile){
+    &::before{
+      content:'';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      display: block;
+      width: 20px;
+      background-color: $colorOrange;
+    }
+  }
+  &__logo{
+    width: fit-content;
+    padding: rem(20) rem(40);
+    color: $colorWhite;
+    background-color: $colorOrange;
+    @include media-breakpoint-down(mobile){
+      display: flex;
+      justify-content: center;
+      padding: rem(10) rem(30);
+      width: calc(100vw + 20px);
+      margin-left: -10px;
+      svg{
+        width: rem(250) !important;
+        height: rem(65) !important;
+        margin-left: -20px;
+      }
+    }
+  }
+  &__content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    @include adaptiveValue("margin-top", 200, 50);
+    @include adaptiveValue("margin-left", 50, 10, 1920, 767);
+    @include adaptiveValue("gap", 100, 30);
+    @include media-breakpoint-down(laptop){
+      justify-content: center;
+      text-align: center;
+    }
+    @include media-breakpoint-down(laptop){
+      margin: auto;
+    }
+  }
+  &__text{
+    flex: 0 1 rem(800);
+    @include adaptiveValue("font-size", 30, 20);
+    line-height: 1.3;
+  }
+  &__btn{
+    display: block;
+    background-color: $colorWhite;
+    border: 1px solid $colorBlack;
+    padding: rem(20);
+    @include adaptiveValue("font-size", 24, 18);
+    @include media-breakpoint-down(mobileSmall){
+      flex: 1 1 auto;
+    }
+  }
+}
 @import 'test';

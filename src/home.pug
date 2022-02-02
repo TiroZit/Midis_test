@@ -13,12 +13,15 @@ block vars
 	- var widthImage = '400'
 	- var heightImage = '300'
 	- var favicon = 'img/favicons/favicon.png'
-	- var font = 'fonts/.woff2'
+	- var font = 'fonts/Montserrat-Medium.woff2'
 	- var light = ''
 	- var dark = ''
 block content
 	.wrapper
-		include _html/_header
 		main.page
-		include _html/_footer
+			.page__logo 
+				+svg('logo', '350', '85', 'currentColor', 'none')
+			.page__content
+				h1.page__text Мы предлагаем Вам пройти профориентационный тест, состоящий из 60 вопросов. По итогу которого, вы узнаете, какой профиль обучения подходит Вам больше всего.
+				a.page__btn.btn(href='questions.html') Пройти тест
 	script(src="js/app.min.js")

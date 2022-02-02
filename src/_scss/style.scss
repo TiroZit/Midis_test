@@ -89,10 +89,6 @@ body {
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
-	margin: 0 rem(50);
-	@include media-breakpoint-down(laptop){
-		margin: 0 rem(10);
-	}
 	// Прижимаем footer
 	> main {
 		flex: 1 1 auto;
