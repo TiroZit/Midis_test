@@ -1,0 +1,81 @@
+extends _html/_base
+include _html/_mixins
+block vars
+  - var lang = 'ru'
+  - var type = 'website'
+  - var title = 'Проф. Тест | МИДиС'
+  - var description = ''
+  - var siteName = ''
+  - var keywords = ''
+  - var url = ''
+  - var imageLogo = ''
+  - var typeImage = 'image/webp'
+  - var widthImage = '400'
+  - var heightImage = '300'
+  - var favicon = 'img/favicons/favicon.png'
+  - var font = 'fonts/Montserrat-Medium.woff2'
+  - var light = ''
+  - var dark = ''
+block content
+  .wrapper
+    include _html/_header
+    main.page__result
+      section.result
+        .result__container
+          .result__rating.rating
+            .rating__item
+              .rating__top 
+                .rating__score
+                  span 98
+                  |  баллов
+                .rating__block.rating__block_creative
+              .rating__title Творческая направленность
+            .rating__item
+              .rating__top 
+                .rating__score
+                  span 56
+                  |  баллов
+                .rating__block.rating__block_social
+              .rating__title Социально-экономический
+            .rating__item
+              .rating__top 
+                .rating__score
+                  span 56
+                  |  баллов
+                .rating__block.rating__block_humanitarian
+              .rating__title Гуманитарный
+            .rating__item
+              .rating__top 
+                .rating__score
+                  span 26
+                  |  баллов
+                .rating__block.rating__block_science
+              .rating__title Естественно-научный
+            .rating__item
+              .rating__top 
+                .rating__score
+                  span 7
+                  |  баллов
+                .rating__block.rating__block_technological
+              .rating__title Технологический
+          .result__text Направления, которые Вам ближе всего:
+          .result__directions.directions
+            .directions__item
+              .directions__title Цифровая графика в индустрии компьютерных играх
+              .directions__footer 
+                .directions__subtitle Дизайн
+                a.directions__link(href="https://midis.ru/midis-obrazovanie-s-trudoustroystvom/dizayn/3d-modelirovanie-dlya-kompyuternykh-igr-i-animatsiya/") Узнать больше
+            .directions__item
+              .directions__title Дизайн среды
+              .directions__footer 
+                .directions__subtitle Дизайн
+                a.directions__link(href="https://midis.ru/midis-obrazovanie-s-trudoustroystvom/dizayn/3d-modelirovanie-dlya-kompyuternykh-igr-i-animatsiya/") Узнать больше
+            .directions__item
+              .directions__title Дизайн одежды и маркетинг в модной индустрии
+              .directions__footer 
+                .directions__subtitle Дизайн
+                a.directions__link(href="https://midis.ru/midis-obrazovanie-s-trudoustroystvom/dizayn/3d-modelirovanie-dlya-kompyuternykh-igr-i-animatsiya/") Узнать больше
+          a.result__share(href="#")
+            +svg('share', '31', '44', 'currentColor', 'none')
+    include _html/_footer
+  script(src="js/app.min.js")

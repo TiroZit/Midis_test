@@ -1,0 +1,142 @@
+.result {
+  margin: rem(50) 0;
+  &__container{
+    max-width: rem(1600);
+    margin: 0 auto;
+  }
+  // .result__rating
+  &__rating {
+    margin-bottom: rem(50);
+  }
+  // .result__text
+  &__text {
+    font-size: rem(20);
+  }
+  // .result__directions
+  &__directions {
+    margin: rem(30) 0;
+  }
+  // .result__share
+  &__share {
+    display: block;
+    width: fit-content;
+    transition: color .3s ease 0s;
+    margin-left: auto;
+    @media (any-hover: hover){
+      &:hover{
+        color: var(--colorOrange);
+      }
+    }
+  }
+}
+.rating {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  gap: rem(50);
+  font-size: rem(20);
+  &::after{
+    content:'';
+    position: absolute;
+    display: block;
+    bottom: rem(60);
+    background-color: var(--colorBlackOnyx);
+    height: 1px;
+    width: 100%;
+  }
+  // .rating__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 15%;
+  }
+  &__top{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: rem(700);
+  }
+  // .rating__score
+  &__score {
+    text-align: right;
+    border-bottom: 1px solid var(--colorBlackOnyx);
+  }
+  // .rating__block
+  &__block {
+    width: rem(160);
+    &_creative{
+      height: 98%;
+      background-color: #FB96CB;
+    }
+    &_social{
+      height: 56%;
+      background-color: #FFC000;
+    }
+    &_humanitarian{
+      height: 56%;
+      background-color: #ffd8c6;
+    }
+    &_science{
+      height: 26%;
+      background-color: #CAF04D;
+    }
+    &_technological{
+      height: 7%;
+      background-color: #87FEE1;
+    }
+  }
+  // .rating__title
+  &__title {
+    max-width: rem(232);
+    margin-top: rem(20);
+  }
+}
+.directions {
+  display: grid;
+  justify-content: space-around;
+  gap: rem(50);
+  grid-template-columns: repeat(3 ,minmax(320px,400px));
+  grid-template-rows: 150px;
+  // .directions__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    padding: rem(30) rem(20);
+    border: 1px solid var(--colorBlackOnyx);
+    transition: all .3s ease 0s;
+    @media (any-hover: hover){
+      &:hover{
+        color: var(--colorOrange);
+        border: 1px solid var(--colorOrange);
+      }
+    }
+  }
+  // .directions__title
+  &__title {
+    font-weight: 600;
+  }
+  // .directions__footer
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+  }
+  // .directions__subtitle
+  &__subtitle {
+  }
+  // .directions__link
+  &__link {
+    text-decoration: underline !important;
+  }
+}
+.share {
+  // .share__title
+  &__title {
+  }
+  // .share__arrow
+  &__arrow {
+  }
+  // .share__link
+  &__link {
+  }
+}

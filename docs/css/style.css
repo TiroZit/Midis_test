@@ -377,6 +377,140 @@ address {
   height: 0.9375rem;
 }
 
+.result {
+  margin: 3.125rem 0;
+}
+
+.result__container {
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+.result__rating {
+  margin-bottom: 3.125rem;
+}
+
+.result__text {
+  font-size: 1.25rem;
+}
+
+.result__directions {
+  margin: 1.875rem 0;
+}
+
+.result__share {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-transition: color 0.3s ease 0s;
+  -o-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+  margin-left: auto;
+}
+
+.rating {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  gap: 3.125rem;
+  font-size: 1.25rem;
+}
+
+.rating::after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: 3.75rem;
+  background-color: var(--colorBlackOnyx);
+  height: 1px;
+  width: 100%;
+}
+
+.rating__item {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 15%;
+}
+
+.rating__top {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 43.75rem;
+}
+
+.rating__score {
+  text-align: right;
+  border-bottom: 1px solid var(--colorBlackOnyx);
+}
+
+.rating__block {
+  width: 10rem;
+}
+
+.rating__block_creative {
+  height: 98%;
+  background-color: #FB96CB;
+}
+
+.rating__block_social {
+  height: 56%;
+  background-color: #FFC000;
+}
+
+.rating__block_humanitarian {
+  height: 56%;
+  background-color: #ffd8c6;
+}
+
+.rating__block_science {
+  height: 26%;
+  background-color: #CAF04D;
+}
+
+.rating__block_technological {
+  height: 7%;
+  background-color: #87FEE1;
+}
+
+.rating__title {
+  max-width: 14.5rem;
+  margin-top: 1.25rem;
+}
+
+.directions {
+  display: grid;
+  justify-content: space-around;
+  gap: 3.125rem;
+  grid-template-columns: repeat(3, minmax(320px, 400px));
+  grid-template-rows: 150px;
+}
+
+.directions__item {
+  display: flex;
+  flex-direction: column;
+  padding: 1.875rem 1.25rem;
+  border: 1px solid var(--colorBlackOnyx);
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.directions__title {
+  font-weight: 600;
+}
+
+.directions__footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.directions__link {
+  text-decoration: underline !important;
+}
+
 @media (min-width: 48em) {
   .page::before {
     content: "";
@@ -628,5 +762,16 @@ address {
 @media (min-width: 47.9375em) and (max-width: 120em) {
   .page__content {
     margin-left: clamp( 0.625rem , -1.0380529055rem  +  3.4692107546vw , 3.125rem );
+  }
+}
+
+@media (any-hover: hover) {
+  .result__share:hover {
+    color: var(--colorOrange);
+  }
+
+  .directions__item:hover {
+    color: var(--colorOrange);
+    border: 1px solid var(--colorOrange);
   }
 }
