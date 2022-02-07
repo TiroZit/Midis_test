@@ -1,0 +1,12 @@
+.popup#auth(aria-hidden='true')
+  .popup__wrapper
+    .popup__content
+      button.popup__close(data-close)
+        +svg('close', '28', '28', 'currentColor', 'none')
+      form.auth__form(action="#")
+        fieldset.auth__inputs
+          input.auth__input(type="text" name='name' placeholder='Фамилия Имя' required)
+          input.auth__input(type="number" name='class' placeholder='Класс' required)
+        .auth__btns 
+          button.auth__btn-submit(type='submit') Высшее образование
+          button.auth__btn-submit(type='submit') Среднее специальное образование

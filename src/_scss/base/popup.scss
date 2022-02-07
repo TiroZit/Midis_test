@@ -53,9 +53,78 @@ body.popup-show::after {
 	background-color: #eee;
 	padding: 20px;
 	width: 100%;
-	max-width: 900px;
+	max-width: 500px;
 	border-radius: 20px;
 	.lock & {
 		visibility: visible;
+	}
+}
+.popup__close{
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	@media (any-hover: hover){
+		transition: color .3s ease 0s;
+		&:hover{
+			color: var(--colorOrange);
+		}
+	}
+}
+.auth{
+	&__form{
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		font-size: rem(18);
+		margin-top: rem(50);
+	}
+	&__inputs{
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		max-width: rem(350);
+	}
+	&__input{
+		border: 1px solid var(--colorBlackOnyx);
+		border-radius: rem(5);
+		background-color: #eee;
+		margin: rem(10) 0;
+		padding: rem(10) rem(15);
+		transition: all .3s ease 0s;
+		&.focus-visible{
+			outline: unset;
+			border: 1px solid var(--colorOrange);
+		}
+		&::placeholder{
+		}
+			&::-webkit-outer-spin-button,
+			&::-webkit-inner-spin-button {
+				appearance: none;
+				margin: 0;
+			}
+	}
+	&__btns{
+		display: flex;
+		gap: rem(15);
+		margin-top: rem(50);
+		font-size: rem(16);
+		@include media-breakpoint-down(mobile){
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+	&__btn-submit{
+		flex: 0 1 50%;
+		border: 1px solid var(--colorOrange);
+		border-radius: 100px;
+		padding: rem(10) rem(15);
+		transition: all .5s ease 0s;
+		@include media-breakpoint-down(mobile){
+			flex: 0 1 90%;
+		}
+		&:hover{
+			background-color: var(--colorOrange);
+			color: var(--colorWhite);
+		}
 	}
 }

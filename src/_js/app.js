@@ -12,7 +12,7 @@
 */
 
 // Включить/выключить FLS (Full Logging System) (в работе)
-window['FLS'] = false;
+window['FLS'] = true;
 
 // Подключение основного файла стилей
 // import "../scss/style.scss";
@@ -66,7 +66,7 @@ import focusVisible from "focus-visible";
 Документация по работе в шаблоне:
 Сниппет (HTML): pl
 */
-// import './libs/popup.js'
+import './libs/popup.js'
 
 /*
 Модуль параллакса мышью
