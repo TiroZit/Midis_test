@@ -1,6 +1,6 @@
 export let configFTP = {
-  host: '',// Адрес ftp
-  user: '',// Пользователь
-  password: '',// Пароль
+  host: '130.61.150.199',// Адрес ftp
+  user: 'ubuntu',// Пользователь
+  password: '6525avd',// Пароль
   parallel: 5,// Кол-во одновременных потоков
 }
