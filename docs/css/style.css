@@ -566,40 +566,24 @@ body.popup-show::after {
   position: relative;
   display: flex;
   justify-content: space-around;
-  gap: 3.125rem;
-  font-size: 1.25rem;
-}
-
-.rating::after {
-  content: "";
-  position: absolute;
-  display: block;
-  bottom: 3.75rem;
-  background-color: var(--colorBlackOnyx);
-  height: 1px;
-  width: 100%;
 }
 
 .rating__item {
   display: flex;
   flex-direction: column;
   flex: 0 1 15%;
+  width: 10px;
 }
 
 .rating__top {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  height: 43.75rem;
 }
 
 .rating__score {
   text-align: right;
   border-bottom: 1px solid var(--colorBlackOnyx);
-}
-
-.rating__block {
-  width: 10rem;
 }
 
 .rating__block_creative {
@@ -630,20 +614,21 @@ body.popup-show::after {
 .rating__title {
   max-width: 14.5rem;
   margin-top: 1.25rem;
+  word-wrap: break-word;
 }
 
 .directions {
   display: grid;
   justify-content: space-around;
-  gap: 3.125rem;
-  grid-template-columns: repeat(3, minmax(320px, 400px));
-  grid-template-rows: 150px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 400px));
 }
 
 .directions__item {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 1.875rem 1.25rem;
+  min-height: 150px;
   border: 1px solid var(--colorBlackOnyx);
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -664,6 +649,15 @@ body.popup-show::after {
   text-decoration: underline !important;
 }
 
+.directions__link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
 @media (min-width: 48em) {
   .page::before {
     content: "";
@@ -682,6 +676,21 @@ body.popup-show::after {
 
   .test__btn-back {
     margin-left: 0.625rem;
+  }
+
+  .rating::after {
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: var(--colorBlackOnyx);
+    height: 1px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 48em) and (min-width: 120em) {
+  .rating::after {
+    bottom: 3.75rem;
   }
 }
 
@@ -747,6 +756,30 @@ body.popup-show::after {
   .test__progress-counter {
     margin-right: 1.875rem;
   }
+
+  .rating {
+    gap: 3.125rem;
+  }
+
+  .rating__top {
+    height: 43.75rem;
+  }
+
+  .rating__score {
+    font-size: 1rem;
+  }
+
+  .rating__block {
+    width: 8.125rem;
+  }
+
+  .rating__title {
+    font-size: 1.25rem;
+  }
+
+  .directions {
+    gap: 3.125rem;
+  }
 }
 
 @media (max-width: 20em) {
@@ -801,6 +834,30 @@ body.popup-show::after {
   .test__progress-counter {
     margin-right: 0.625rem;
   }
+
+  .rating {
+    gap: 0.625rem;
+  }
+
+  .rating__top {
+    height: 25rem;
+  }
+
+  .rating__score {
+    font-size: 0.875rem;
+  }
+
+  .rating__block {
+    width: 2.5rem;
+  }
+
+  .rating__title {
+    font-size: 0.625rem;
+  }
+
+  .directions {
+    gap: 1.25rem;
+  }
 }
 
 @media (max-width: 63.99875em) {
@@ -815,6 +872,10 @@ body.popup-show::after {
 
   .page__content {
     margin: auto;
+  }
+
+  .rating {
+    justify-content: space-between;
   }
 }
 
@@ -858,6 +919,10 @@ body.popup-show::after {
   .test__answer {
     flex-direction: column;
     justify-content: center;
+  }
+
+  .rating__title {
+    margin-top: 0.625rem;
   }
 }
 
@@ -919,11 +984,47 @@ body.popup-show::after {
   .test__progress-counter {
     margin-right: clamp( 0.625rem , 0.375rem  +  1.25vw , 1.875rem );
   }
+
+  .rating {
+    gap: clamp( 0.625rem , 0.125rem  +  2.5vw , 3.125rem );
+  }
+
+  .rating__top {
+    height: clamp( 25rem , 21.25rem  +  18.75vw , 43.75rem );
+  }
+
+  .rating__score {
+    font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem );
+  }
+
+  .rating__block {
+    width: clamp( 2.5rem , 1.375rem  +  5.625vw , 8.125rem );
+  }
+
+  .rating__title {
+    font-size: clamp( 0.625rem , 0.5rem  +  0.625vw , 1.25rem );
+  }
+
+  .directions {
+    gap: clamp( 1.25rem , 0.875rem  +  1.875vw , 3.125rem );
+  }
 }
 
 @media (min-width: 47.9375em) and (max-width: 120em) {
   .page__content {
     margin-left: clamp( 0.625rem , -1.0380529055rem  +  3.4692107546vw , 3.125rem );
+  }
+}
+
+@media (min-width: 48em) and (min-width: 20em) and (max-width: 120em) {
+  .rating::after {
+    bottom: clamp( 2.5rem , 2.25rem  +  1.25vw , 3.75rem );
+  }
+}
+
+@media (min-width: 48em) and (max-width: 20em) {
+  .rating::after {
+    bottom: 2.5rem;
   }
 }
 
