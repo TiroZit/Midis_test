@@ -352,8 +352,7 @@ body.popup-show::after {
 .progress-bar {
   width: 2%;
   height: 0.9375rem;
-  border-top-left-radius: 0.3125rem;
-  border-bottom-left-radius: 0.3125rem;
+  border-radius: 0.3125rem;
   background: var(--colorOrange);
 }
 
