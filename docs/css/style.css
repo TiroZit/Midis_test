@@ -839,7 +839,7 @@ body.popup-show::after {
   }
 
   .rating__top {
-    height: 25rem;
+    height: 15.625rem;
   }
 
   .rating__score {
@@ -989,7 +989,7 @@ body.popup-show::after {
   }
 
   .rating__top {
-    height: clamp( 25rem , 21.25rem  +  18.75vw , 43.75rem );
+    height: clamp( 15.625rem , 10rem  +  28.125vw , 43.75rem );
   }
 
   .rating__score {
