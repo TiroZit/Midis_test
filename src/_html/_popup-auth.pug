@@ -7,6 +7,10 @@
         fieldset.auth__inputs
           input.auth__input(type="text" name='name' placeholder='Фамилия Имя' required)
           input.auth__input(type="number" name='class' placeholder='Класс' required)
+          input.auth__input(type="tel" name='phone' placeholder='Телефон' required)
+        .auth__agree 
+          |Выбирая тип обучения, я даю свое согласие на обработку персональных данных, в соответствии с 
+          a.auth__agree-link(href="https://midis.ru/politika-konfidentsialnosti/" target='_blank') Политикой конфиденциальности
         .auth__btns 
           button.auth__btn-submit(type='submit') Высшее образование
           button.auth__btn-submit(type='submit') Среднее специальное образование

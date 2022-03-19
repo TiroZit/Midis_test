@@ -66,4 +66,15 @@
     }
   }
 }
+.auth__agree{
+  font-size: rem(14);
+  margin-top: rem(30);
+  &-link{
+    color: var(--colorOrange);
+    text-decoration: underline !important;
+  }
+}
+.auth__btns{
+  margin-top: rem(15);
+}
 @import 'test';
